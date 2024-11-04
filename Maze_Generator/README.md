@@ -1,7 +1,9 @@
 ﻿# project_python
-Лабиринт
+Maze_Generator
 
 Запуск:
+
+git clone этот репозиторий
 
 python3 main.py
 
