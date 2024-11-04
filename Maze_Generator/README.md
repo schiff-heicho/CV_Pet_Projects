@@ -1,5 +1,4 @@
-﻿# project_python
-Maze_Generator
+﻿# project_python-Maze_Generator
 
 Запуск:
 
