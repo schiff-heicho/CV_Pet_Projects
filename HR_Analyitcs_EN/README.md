@@ -38,7 +38,7 @@ __<h2>Data Visualization</h2>__
 
 __1) Tableau Dashboard__
 
-![HR Analytics Tableau Dashboard](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/HR%20Analytics%20Dashboard.png)
+![HR Analytics Tableau Dashboard](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/HR%20Analytics%20Dashboard.png)
 
 __<h2>Dashboard Contents</h2>__
 
@@ -46,31 +46,31 @@ __<h3>KPI:</h3>__
 
 __1. Employee Count:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/1-Employee_Count.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/1-Employee_Count.png)
 
 This metric helps the department to assess workforce size and plan for future growth or downsizing effectively.
 
 __2. Attrition Count:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/2-Attrition_Count.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/2-Attrition_Count.png)
 
 Gives a complete and reliable data on the number of employees who have left the organization.
 
 __3. Attrition Rate:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/3-Attrition_Rate.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/3-Attrition_Rate.png)
 
 Gives a clear measure of attrition rate, such that the organization can assess the overall turnover level or compare it with industry benchmarks, improving the ability to gauge employee satisfaction and engagement.
 
 __4. Active Employees:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/4-Active_Employees.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/4-Active_Employees.png)
 
 This metric differentiate between active and inactive employees, thus aids in accurately assessing the current workforce's productivity and capacity.
 
 __5. Average Age:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/5-Average_Age.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/5-Average_Age.png)
 
 Gives insight into the average age of employees, making it easy to evaluate workforce demographics, succession planning, and the organization's ability to attract and retain younger talent.
 
@@ -78,37 +78,37 @@ __<h3>Charts:</h3>__
 
 __1) Attrition by Gender:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/6-Attrition_by_Gender.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/6-Attrition_by_Gender.png)
 
 Gives insight into the attrition patterns based on gender, making it difficult to identify any gender-related disparities and implement targeted retention strategies.
 
 __2) Department-wise Attrition:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/7-Department_wise_Attrition.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/7-Department_wise_Attrition.png)
 
 This visualization showcases attrition rates across different departments. This boosts their ability to identify departments with higher attrition rates and address any underlying issues or concerns effectively.
 
 __3) Number of Employees by Age Group:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/8-Number_of_Employees_by_Age_Group.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/8-Number_of_Employees_by_Age_Group.png)
 
 The HR department requires visual representations to analyze the distribution of employees across various age groups. This helps in assessing workforce demographics, identifying any age-related gaps or imbalances, and implementing targeted HR policies or programs.
 
 __4) Job Satisfaction Ratings:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/9-Job_Satisfaction_Ratings.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/9-Job_Satisfaction_Ratings.png)
 
 This visualization is used to represent job satisfaction ratings, improving their ability to measure employee engagement and overall job satisfaction levels effectively.
 
 __5) Education Field-wise Attrition:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/10-Education_Field_wise_Attrition.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/10-Education_Field_wise_Attrition.png)
 
 This visual representations can be used to analyze attrition rates based on education fields. This helps identify specific educational backgrounds that may be associated with higher attrition, enabling the organization to tailor retention strategies accordingly.
 
 __6) Attrition Rate by Gender for Different Age Groups:__
 
-![image](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/11-Attrition_Rate_by_Gender_for_Different_Age_Groups.png)
+![image](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/png/11-Attrition_Rate_by_Gender_for_Different_Age_Groups.png)
 
 This visualizations displays attrition rates based on gender and different age groups making it easy to identify any age and gender-related attrition trends, aiding the organization in implementing targeted retention strategies for specific employee segments.
 
@@ -117,7 +117,7 @@ __<h2>QA Testing (Quality Assurance)</h2>__
 
 2) __Data Validation -__ Checking accuracy and quality of data and to match the values in Tableau report with the SQL queries.
 
-[SQL Queries for Analyzing/Testing Reports](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/SQL%20Analysis-%20Testing%20Tableau%20%26%20Power%20BI%20Reports.txt)
+[SQL Queries for Analyzing/Testing Reports](https://github.com/meaLumenJucunda/CV_Pet_Projects/blob/main/HR_Analyitcs_EN/SQL%20Analysis-%20Testing%20Tableau%20%26%20Power%20BI%20Reports.txt)
 
 __<h1>CONCLUSION</h1>__
 
