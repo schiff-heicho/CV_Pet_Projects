@@ -1,0 +1,185 @@
+-- TESTING TABLEAU/ POWER BI REPORTS IN SQL
+
+--KPI: 
+
+--1) Employee Count-
+--Data Validation
+select sum(employee_count) as Employee_Count from hrdata;
+
+--Functional Validation:
+select sum(employee_count) as Employee_Count from hrdata;
+select sum(employee_count) as Employee_Count from hrdata 
+where education ='High School';
+select sum(employee_count) as Employee_Count from hrdata 
+where department = 'R&D';
+select sum(employee_count) as Employee_Count from hrdata 
+where education_field = 'Medical';
+
+--2) Attrition Count-
+--Data Validation:
+select count(attrition) from hrdata
+where attrition = 'Yes'
+
+--Functional Validation:
+select count(attrition) from hrdata
+where attrition = 'Yes' AND department = 'R&D' and education_field= 'Medical'
+and education= 'High School';
+
+--3) Attrition Rate-
+--Data Validation:
+select ROUND(CAST((select count(attrition) from hrdata where attrition='Yes' ) AS float) / 
+NULLIF(sum(employee_count), 0) * 100, 2) AS Attrition_count from hrdata
+
+--Functional Validation:
+select ROUND(CAST((select count(attrition) from hrdata where attrition='Yes' and department='Sales') AS DECIMAL) / 
+NULLIF(sum(employee_count), 0) * 100, 2) AS Attrition_count from hrdata
+where department='Sales'
+
+--4) Active Employee-
+--Data Validation:
+select sum(employee_count) - (select count(attrition) from hrdata where attrition='Yes') as Active_Employee from hrdata
+
+--Functional Validation:
+select sum(employee_count) - (select count(attrition) from hrdata where attrition='Yes' and gender='Male') as Active_Employee from hrdata
+where gender='Male'
+
+--5) Average Age-
+--Data Validation:
+select round(sum(age)/count(emp_no),2) from hrdata
+
+--Functional Validation:
+select round(sum(age)/count(emp_no),2) from hrdata
+where gender='Female'
+
+--CHARTS:
+
+--6) Attrition by Gender-
+--Data Validation:
+select gender,count(attrition) from hrdata
+where attrition='Yes'
+group by gender
+order by count(attrition) desc
+
+--Functional Validation:
+select gender,count(attrition) from hrdata
+where attrition='Yes' and education='High School'
+group by gender
+order by count(attrition) desc
+
+7) Department wise Attrition-
+--Data Validation:
+select department, count(attrition),
+Round((cast(count(attrition) as float) / 
+(select cast(count(attrition) as float) from hrdata where attrition='Yes'))*100, 2)
+from hrdata
+where attrition='Yes' 
+group by department
+order by count(attrition) desc
+
+--Functional Validation:
+select department, count(attrition),
+Round((cast(count(attrition) as float) /(select cast(count(attrition) as float) from hrdata where attrition='Yes'))*100, 2)
+from hrdata
+where attrition='Yes' and gender='Male'
+group by department
+order by count(attrition) desc
+
+8) No of Employee by Age Group-
+--Data Validation:
+select age,sum(employee_count) from hrdata
+group by age
+order by age
+
+--Functional Validation:
+select age,sum(employee_count) from hrdata
+where gender='Female'
+group by age
+order by age
+
+--9) Education Field wise Attrition-
+--Data Validation:
+select education_field,count(attrition) from hrdata
+where attrition='Yes' 
+group by education_field
+order by count(attrition) desc
+
+--Functional Validation:
+select education_field,count(attrition) from hrdata
+where attrition='Yes' and department='Sales'
+group by education_field
+order by count(attrition) desc
+
+--10) Attrition Rate by Gender for different Age Group-
+--Data Validation:
+select age_band, gender, count(attrition) as attrition, 
+round((cast(count(attrition) as numeric) / (select count(attrition) from hrdata where attrition = 'Yes')) * 100,2) as pct
+from hrdata
+where attrition = 'Yes'
+group by age_band, gender
+order by age_band, gender desc;
+
+--Functional Validation:
+select age_band, gender, count(attrition) as attrition, 
+round((cast(count(attrition) as numeric) / (select count(attrition) from hrdata where attrition = 'Yes')) * 100,2) as pct
+from hrdata
+where attrition = 'Yes' and department='Sales'
+group by age_band, gender
+order by age_band, gender desc;
+
+--11) Job Satisfaction Rating-
+--Data Validation:
+-- Create a temporary table to store the pivot query result
+CREATE TABLE #TempPivot 
+(
+    job_role varchar(50),
+    [1] numeric,
+    [2] numeric,
+    [3] numeric,
+    [4] numeric
+);
+-- Insert data into the temporary table using conditional aggregation
+INSERT INTO #TempPivot (job_role, [1], [2], [3], [4])
+SELECT job_role,
+       SUM(CASE WHEN job_satisfaction = 1 THEN employee_count ELSE 0 END) AS [1],
+       SUM(CASE WHEN job_satisfaction = 2 THEN employee_count ELSE 0 END) AS [2],
+       SUM(CASE WHEN job_satisfaction = 3 THEN employee_count ELSE 0 END) AS [3],
+       SUM(CASE WHEN job_satisfaction = 4 THEN employee_count ELSE 0 END) AS [4]
+FROM hrdata
+GROUP BY job_role;
+
+select* from #TempPivot
+
+--Functional Validation:
+-- Create a temporary table to store the pivot query result
+CREATE TABLE #TempPivot 
+(
+    job_role varchar(50),
+    [1] numeric,
+    [2] numeric,
+    [3] numeric,
+    [4] numeric
+);
+-- Insert data into the temporary table using conditional aggregation
+INSERT INTO #TempPivot (job_role, [1], [2], [3], [4])
+SELECT job_role,
+       SUM(CASE WHEN job_satisfaction = 1 THEN employee_count ELSE 0 END) AS [1],
+       SUM(CASE WHEN job_satisfaction = 2 THEN employee_count ELSE 0 END) AS [2],
+       SUM(CASE WHEN job_satisfaction = 3 THEN employee_count ELSE 0 END) AS [3],
+       SUM(CASE WHEN job_satisfaction = 4 THEN employee_count ELSE 0 END) AS [4]
+FROM hrdata
+where gender='Female'
+GROUP BY job_role;
+
+select* from #TempPivot
+
+--12) Age-wise, Gender-wise Employee count (Power Bi stacked bar chart) -
+--Data Validation:
+select age_band,gender,sum(employee_count) from hrdata
+group by age_band,gender
+order by age_band,gender desc
+
+--Functional Validation:
+select age_band,gender,sum(employee_count) from hrdata
+where department='Sales'
+group by age_band,gender
+order by age_band,gender desc
