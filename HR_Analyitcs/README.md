@@ -7,10 +7,10 @@ ____
 
 __Tools used : Tableau, MS SQL Server__
 
-[Dataset used]([https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/hrdata.csv])
+[Dataset used](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/hrdata.csv)
 
 __Tableau Dashboard__    
-[click here to view]([https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/HR_Analytics_Dashboard_Tablaeu.pdf])   
+[click here to view](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/HR_Analytics_Dashboard_Tablaeu.pdf)   
 
 __<h1>BUSINESS PROBLEM</h1>__
 A Company faces a challenge in efficiently analyzing and monitoring employee data, with around 12k rows of data to make informed decisions regarding retention, development, and recruitment strategies. This lack of comprehensive data analysis inhibits the ability to track progress in reducing attrition rates effectively. Furthermore, without detailed insights into employee demographics such as gender, age group, job satisfaction, and education field, it becomes difficult to identify trends and patterns that could inform targeted interventions.It is also required to test the Dashboards developed on Tableau for QA. Thus, there is a pressing need for a solution that provides robust analytics capabilities, including trend analysis and demographic segmentation to empower HR managers and business leaders in making data-driven decisions for optimizing workforce management practices.
