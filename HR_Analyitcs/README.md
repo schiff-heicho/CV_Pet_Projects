@@ -6,7 +6,6 @@ ____
 
 
 __Tools used : Tableau, MS SQL Server__
-
 [Dataset used](https://github.com/meaLumenJucunda/LumenJucunda/blob/projects/HR_Analyitcs/hrdata.csv)
 
 __Tableau Dashboard__    
