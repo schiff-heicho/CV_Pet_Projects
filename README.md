@@ -2,7 +2,7 @@
 Салют товарищ! 
 Меня зовут Шифф Антал. 
 
-Сейчас я учусь в Московском физико-техническом института. 
+Сейчас я учусь в Московском физико-техническом институте. 
 
 Здесь буду выкладитвать несколько мои проекты во время учёбы и после учёбы.
 
@@ -10,7 +10,7 @@
 Üdv elvtárs! 
 Schiff Antal vagyok. 
 
-Jelenleg Moszkvai Fizikai és Technológiai Intézetben tanulok. 
+Jelenleg a Moszkvai Fizikai és Technológiai Intézetben tanulok. 
 
 Itt fogom közzé tenni több projekteimet a tanulmányaim alatt és utána.
 
