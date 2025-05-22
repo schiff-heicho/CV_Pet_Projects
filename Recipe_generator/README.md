@@ -6,11 +6,11 @@
 
 ## Структура проекта
 .
-├── requirements.txt # Список зависимостей
-├── main.py # Основной скрипт Flask-приложения
-├── README.md # Документация
+├── requirements.txt - Список зависимостей
+├── main.py - Основной скрипт Flask-приложения
+├── README.md - Документация
 └── templates/
- └── index.html # HTML-шаблон веб-интерфейса
+ └── index.html - HTML-шаблон веб-интерфейса
 
 ### Описание файлов:
 - **`requirements.txt`**  
