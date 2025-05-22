@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Генератор рецептов</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f3f7ff, #b3c7ff);
+            margin: 0; 
+            padding: 0; 
+            min-height: 100vh;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        #container {
+            background: white;
+            max-width: 700px;
+            margin-top: 40px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            width: 90%;
+        }
+        h1 {
+            color: #3950a1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 2px solid #3950a1;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            outline-offset: 1px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #2b3d78;
+        }
+        button {
+            background-color: #3950a1;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #283764;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 6px;
+        }
+        .recipe-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .recipe-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1a1a7a;
+            margin-bottom: 5px;
+        }
+        .recipe-link {
+            color: #3950a1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .recipe-link:hover {
+            text-decoration: underline;
+        }
+        .recipe-content {
+            flex-grow: 1;
+        }
+        .error-message {
+            color: #dc3545;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            background: #ffe6e6;
+        }
+        .language-warning {
+            color: #856404;
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border: 1px solid #ffeeba;
+        }
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Генератор рецептов</h1>
+        <form method="post" action="/">
+            <input
+                type="text"
+                name="ingredients"
+                placeholder="Введите ингредиенты через запятую"
+                value="{{ ingredients | default('') }}"
+                required
+            />
+            <div class="language-warning">
+                Пока русский язык временно не поддерживается в нашем веб-приложение. Вводите ингредиенты на английском (например: apple, cheese).
+            </div>
+            <button type="submit">Найти рецепты</button>
+        </form>
+        
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% endif %}
+        
+        {% if recipes %}
+            <h2>Найденные рецепты:</h2>
+            <ul>
+            {% for recipe in recipes %}
+                <li>
+                    {% if recipe.image %}
+                        <img 
+                            src="{{ recipe.image }}" 
+                            alt="{{ recipe.title }}" 
+                            class="recipe-image"
+                        >
+                    {% endif %}
+                    <div class="recipe-content">
+                        <div class="recipe-title">{{ recipe.title }}</div>
+                        <a class="recipe-link" href="{{ recipe.link }}" target="_blank" rel="noopener noreferrer">
+                            Открыть рецепт →
+                        </a>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
