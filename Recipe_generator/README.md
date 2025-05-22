@@ -12,9 +12,7 @@
 
 ├── README.md - Документация
 
-└── templates/
-
-  └── index.html - HTML-шаблон веб-интерфейса
+└── templates/index.html - HTML-шаблон веб-интерфейса
 
 
 ### Описание файлов:
