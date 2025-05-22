@@ -1,38 +1,37 @@
-**Problem Statement:**
+**О проблеме:**
 
-Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban, and rural areas. Customer-first applies for a home loan after that company validates the customer eligibility for a loan.
+Компания Dream Housing Finance занимается всеми видами жилищного кредитования. Они представлены во всех городских, полугородских и сельских районах. Клиент сначала подает заявку на получение кредита на покупку жилья, после чего компания проверяет право клиента на получение кредита.
 
-The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling the online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History, and others. To automate this process, they have given a problem to identify the customer's segments, those are eligible for loan amount so that they can specifically target these customers. Here they have provided a partial data set.
+Компания хочет автоматизировать процесс проверки права на получение кредита (в режиме реального времени) на основе данных, предоставленных клиентом при заполнении онлайн-заявки. К таким данным относятся пол, семейное положение, образование, количество иждивенцев, доход, сумма займа, кредитная история и другие. Чтобы автоматизировать этот процесс, они поставили задачу определить сегменты клиентов, которые имеют право на получение кредита, чтобы можно было целенаправленно работать с этими клиентами. Здесь они предоставили частичный набор данных.
 
-**GOAL:**
-This model will predict the eligibility of a customer for getting a loan from the company.
+**ЦЕЛЬ:**
+Эта модель будет предсказывать право клиента на получение кредита от компании.
 
-**MODELS USED:**
-I have used the Logistic Regression algorithm for model building. 
+**ИСПОЛЬЗОВАННЫЕ МОДЕЛИ:**
+Для построения модели я использовал алгоритм логистической регрессии. 
 
-**WHAT I HAD DONE:**
-I have done the following operations on the given dataset.
-- Data Exploration
-- Data Cleaning
-- Data Visualization
-- Model Building
-- Prediction.
+**ЧТО Я СДЕЛАЛ:**
+Я выполнил следующие операции с данным набором данных.
+- Исследование данных
+- Очистка данных
+- Визуализация данных
+- Построение модели
+- Прогнозирование.
 
-**LIBRARIES NEEDED:**
+**НЕОБХОДИМЫЕ БИБЛИОТЕКИ:**
 - Pandas 
 - Matplotlib
 - Seaborn
 - Numpy
 - Sklearn
 
-**Accuracy:**
+** Точность:**
 
-Logistic Regression
+Логистическая регрессия
 0.8216216216216217
 
-Decision Tree
+Дерево решений
 0.7189189189189189
 
-**CONCLUSION:**
-Hence the model built successfully and is ready to predict the eligibility of a customer to get a loan from the company.
-
+**ВЫВОД:**
+Таким образом, модель построена успешно и готова предсказать право клиента на получение кредита от компании.
