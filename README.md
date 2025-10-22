@@ -1,10 +1,18 @@
-# LumenJucunda
+# schiff-heicho
 Салют товарищ! 
 Меня зовут Шифф Антал. 
 
 Сейчас я учусь в Московском физико-техническом институте. 
 
 Здесь буду выкладитвать несколько мои проекты во время учёбы и после учёбы.
+
+---
+Salute comrade! 
+My name is Schiff Antal. 
+
+Currently I study at the Moscow Institute of Physics and Technology. 
+
+Here I will post several of my projects during and after my studies.
 
 ---
 Üdv elvtárs! 
@@ -21,10 +29,4 @@ Itt fogom közzé tenni több projekteimet a tanulmányaim alatt és utána.
 
 在这里我将发布我在学习期间和学习结束后所做的几个项目。
 
----
-Salute comrade! 
-My name is Schiff Antal. 
 
-Currently I study at the Moscow Institute of Physics and Technology. 
-
-Here I will post several of my projects during and after my studies.
