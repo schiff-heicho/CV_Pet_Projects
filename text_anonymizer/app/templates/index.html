@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ texts.title }}</h1>
+    <p>{{ texts.description }}</p>
+
+    <form method="post" action="/anonymize?lang={{ current_lang }}">
+        <textarea name="text" placeholder="{{ texts.placeholder }}">{{ original_text or '' }}</textarea>
+        <br>
+        <label>
+            {% if current_lang == 'ru' %}Режим анонимизации:{% else %}Anonymization mode:{% endif %}
+        </label>
+        <select name="mode">
+            <option value="full" {% if selected_mode == 'full' %}selected{% endif %}>{{ texts.full_redaction }}</option>
+            <option value="partial" {% if selected_mode == 'partial' %}selected{% endif %}>{{ texts.partial_redaction }}</option>
+        </select>
+        <br><br>
+        <button type="submit">{{ texts.button_text }}</button>
+    </form>
+
+    {% if anonymized_text %}
+    <div class="result">
+        <h3>{{ texts.result }}</h3>
+        <p>{{ anonymized_text }}</p>
+    </div>
+    {% endif %}
+{% endblock %}

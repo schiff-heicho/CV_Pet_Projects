@@ -1,0 +1,14 @@
+services:
+  text-anonymizer:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - ./app:/app:ro
+    container_name: text_anonymizer_app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
